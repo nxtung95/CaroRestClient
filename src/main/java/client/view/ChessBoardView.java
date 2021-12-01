@@ -1,8 +1,4 @@
-/**
- * Copyright(C) 2018 Luvina Software Company
- * 
- * ChessBoardView.java , Jul 13, 2018 nxtung
- */
+
 package client.view;
 import client.constant.Constant;
 import client.controller.HandleActionListener;
@@ -26,10 +22,11 @@ public class ChessBoardView extends BasePanel {
 	@Override
 	public void init() {
 		// Khởi tạo đối tượng controller
+		System.out.println("Khởi tạo board panel...");
 		controller = new HandleActionListener(this);
 		// Thiết lập thông số tọa độ, kích thước panel
-		setBounds(10, 10, 700, 700);
-		// Thiết lập cách hiển thị của panel
+		setBounds(10, 70, 600, 600);
+		// Thiết lập cách hiển thị của panel0
 		setLayout(null);
 	}
 
@@ -87,19 +84,19 @@ public class ChessBoardView extends BasePanel {
 			// Thiết lập màu phông nền của bàn cờ
 			g.setColor(Color.LIGHT_GRAY);
 			// Lấp đầy màu cho bàn cờ
-			g.fillRect(0, 0, 700, 700);
+			g.fillRect(0, 0, 600, 600);
 
 			// Vẽ các cột trên bàn cờ
 			g.setColor(Color.LIGHT_GRAY.darker().darker());
 			int wScale = Constant.SIZE_O_CO;
 			for (int i = 0; i < Constant.SO_COT; i++) {
-				g.drawLine(i * wScale, 0, i * wScale, 700);
+				g.drawLine(i * wScale, 0, i * wScale, 600);
 			}
 
 			// Vẽ các hàng trên bàn cờ
 			int hScale = Constant.SIZE_O_CO;
 			for (int i = 0; i < Constant.SO_HANG; i++) {
-				g.drawLine(0, i * hScale, 700, i * hScale);
+				g.drawLine(0, i * hScale, 600, i * hScale);
 			}
 		}
 	}

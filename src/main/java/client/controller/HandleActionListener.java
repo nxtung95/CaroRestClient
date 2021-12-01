@@ -1,12 +1,8 @@
-/**
- * Copyright(C) 2018 Luvina Software Company
- * 
- * HandleMouseClick.java , Jul 18, 2018 nxtung
- */
+
 package client.controller;
 
-import client.DanhCoRequest;
-import client.DanhCoResponse;
+import client.obj.DanhCoRequest;
+import client.obj.DanhCoResponse;
 import client.constant.Constant;
 import client.view.ChessBoardView;
 import com.google.gson.Gson;
@@ -43,10 +39,10 @@ public class HandleActionListener implements MouseListener {
 	public void mouseClicked(MouseEvent e) {
 		String type;
 		if (turn == 0) {
-			type = "X";
+			type = Constant.QUAN_X;
 			turn = 1;
 		} else {
-			type = "O";
+			type = Constant.QUAN_O;
 			turn = 0;
 		}
 		int[] xy = dieuChinhQuanCoHopLe(e.getX(), e.getY());
@@ -65,7 +61,7 @@ public class HandleActionListener implements MouseListener {
 			HttpEntity<DanhCoRequest> requestBody = new HttpEntity<>(danhCoRequest, headers);
 
 			// Gửi yêu cầu với phương thức POST.
-			DanhCoResponse res = restTemplate.postForObject("http://localhost:8080/danhCo", requestBody, DanhCoResponse.class);
+			DanhCoResponse res = restTemplate.postForObject("http://localhost:8081/danhCo", requestBody, DanhCoResponse.class);
 			System.out.println("Response danhCo: " + new Gson().toJson(res));
 			if (res == null || "500".equals(res.getCode())) {
 				System.out.println("Something error!");

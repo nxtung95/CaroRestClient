@@ -1,4 +1,4 @@
-package client;
+package client.obj;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

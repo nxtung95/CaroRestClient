@@ -1,8 +1,3 @@
-/**
- * Copyright(C) 2018 Luvina Software Company
- * 
- * ICommon.java , Jul 13, 2018 nxtung
- */
 package client.view;
 
 /**

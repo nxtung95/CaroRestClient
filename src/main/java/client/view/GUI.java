@@ -1,8 +1,3 @@
-/**
- * Copyright(C) 2018 Luvina Software Company
- * 
- * GUI.java , Jul 13, 2018 nxtung
- */
 package client.view;
 
 import javax.swing.*;
@@ -19,8 +14,8 @@ import java.awt.event.WindowEvent;
  */
 public class GUI extends JFrame implements ICommon {
 	// Khai báo các thuộc tính.
-	public static final int W_FRAME = 720;
-	public static final int H_FRAME = 720;
+	public static final int W_FRAME = 620;
+	public static final int H_FRAME = 680;
 	private static final String TITLE = "Game Caro";
 	private MainPanel mainPanel;
 
@@ -82,10 +77,7 @@ public class GUI extends JFrame implements ICommon {
 	public void addComps() {
 		mainPanel = new MainPanel();
 		mainPanel.setPreferredSize(new Dimension(W_FRAME, H_FRAME));
-
-		// Add vao GUI
 		add(mainPanel);
-		// Thong bao cho GUI update kich thuoc chua MainPanel
 		pack();
 		setLocationRelativeTo(null);
 	}

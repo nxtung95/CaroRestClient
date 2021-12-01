@@ -1,21 +1,16 @@
-/**
- * Copyright(C) 2018 Luvina Software Company
- * 
- * MainPanel.java , Jul 13, 2018 nxtung
- */
 package client.view;
 
 import java.awt.*;
 
 /**
  * Khởi tạo panel chính của giao diện
- * 
- * @author nxtung
  *
  */
 public class MainPanel extends BasePanel {
 	// Khai báo các thuộc tính
 	private ChessBoardView pBoard;
+	private NewGameButton btnNewGame;
+	private LoginFormPanel pLoginForm;
 
 	/**
 	 * Thiết lập các thông số MainPanel
@@ -41,10 +36,14 @@ public class MainPanel extends BasePanel {
 	 */
 	@Override
 	public void addComps() {
-		// Khoi tao va add Comps
-		pBoard = new ChessBoardView();
-		// Add vao MainPanel
-		add(pBoard);
+//		pLoginForm = new LoginFormPanel();
+//		add(pLoginForm);
+//		// Khoi tao va add Comps
+//		pBoard = new ChessBoardView();
+//		btnNewGame = new NewGameButton();
+//		// Add vao MainPanel
+//		add(pBoard);
+//		add(btnNewGame);
 	}
 
 }
